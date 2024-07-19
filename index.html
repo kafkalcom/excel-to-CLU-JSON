@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style/simple.min.css" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <title>Excel To CLU JSON</title>
+    <meta name="description" content="A simple tool for convert Excel/CSV content to CLU compatible JSON file" />
+  </head>
+  <body>
+    <header>
+      <h1>Excel To CLU JSON</h1>
+      <p>
+        A simple tool for convert Excel/CSV content to
+        <a
+          href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/overview"
+          title="Conversational Language Understanding"
+          target="_blank"
+          >CLU</a
+        >
+        compatible JSON file
+      </p>
+
+      <p>
+        Examples:
+        <a href="/examples/example.xlsx" title="Excel">Excel</a>
+        <a href="/examples/example.csv" title="CSV">CSV</a>
+      </p>
+    </header>
+
+    <main>
+      <details open="true">
+        <summary>Config</summary>
+        <div class="config-container">
+          <div>
+            <label>Delimeter</label>
+            <select id="config-delimeter">
+              <option selected="selected" value="">Tab</option>
+              <option value=",">Comma</option>
+              <option value=";">Semicolon</option>
+            </select>
+          </div>
+          <div>
+            <label>File Name Prefix</label>
+            <input type="text" id="output-file-name" placeholder="export" />
+          </div>
+
+          <div>
+            <label>Default Language</label>
+            <input type="text" id="config-default-language" value="en-us" />
+          </div>
+        </div>
+      </details>
+
+      <div>
+        <div class="textarea-header">
+          <label>CSV Content</label>
+          <button id="convert-btn">Convert</button>
+        </div>
+
+        <label>CSV Content</label>
+        <textarea
+          id="csv-content"
+          rows="8"
+          placeholder="Simply paste your CSV content in here"
+        ></textarea>
+      </div>
+
+      <div>
+        <div class="textarea-header">
+          <label>Train Utterances</label>
+          <button class="download-btn" data-type="train">Download</button>
+        </div>
+        <textarea id="output-train-content" rows="5"></textarea>
+      </div>
+
+      <div>
+        <div class="textarea-header">
+          <label>Test Utterances</label>
+          <button class="download-btn" data-type="test">Download</button>
+        </div>
+        <textarea id="output-test-content" rows="5"></textarea>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ by <a href="https://kafkal.com" target="_blank">kafkal</a></p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

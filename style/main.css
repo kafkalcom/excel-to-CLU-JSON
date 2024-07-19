@@ -1,0 +1,28 @@
+.config-container{
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: 100px;
+}
+
+.config-container input,
+.config-container select{
+    width: 100%;
+}
+
+
+textarea {
+  resize: none;
+}
+
+.textarea-header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.textarea-header label{
+    font-weight: bold;
+}

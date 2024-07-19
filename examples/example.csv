@@ -1,0 +1,4 @@
+text;intent;language;entities;isTest
+I left my heart in Istanbul;Quote;en-us;[{"category":"CityName","offset":19,"length":8}];FALSE
+Hello World;Software;en-us;[];
+Another Example;None;;;TRUE
